@@ -53,17 +53,17 @@ train_errors = []
 val_errors = []
 test_errors = []
 
-for n in range(1, 50):
-    rf = RandomForestRegressor(n, n_jobs = -1) #Using all cores to run the mode, can be modified
-    rf.fit(vectorized_x_train, y_train)
-    
-    train_pred = rf.predict(vectorized_x_train)
-    val_pred = rf.predict(vectorized_x_val)
-    test_pred = rf.predict(vectorized_x_test)
-    
-    train_errors.append(mean_squared_error(y_train, train_pred))
-    val_errors.append(mean_squared_error(y_val, val_pred))
-    test_errors.append(mean_squared_error(y_test, test_pred))
+#for n in range(1, 50):
+#    rf = RandomForestRegressor(n, n_jobs = -1) #Using all cores to run the mode, can be modified
+#    rf.fit(vectorized_x_train, y_train)
+#    
+#    train_pred = rf.predict(vectorized_x_train)
+#    val_pred = rf.predict(vectorized_x_val)
+#    test_pred = rf.predict(vectorized_x_test)
+#    
+#    train_errors.append(mean_squared_error(y_train, train_pred))
+#    val_errors.append(mean_squared_error(y_val, val_pred))
+#    test_errors.append(mean_squared_error(y_test, test_pred))
     
 
 #Printing val and test accuracies
